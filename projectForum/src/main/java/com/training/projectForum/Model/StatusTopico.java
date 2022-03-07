@@ -1,6 +1,6 @@
 package com.training.projectForum.Model;
 
-public enum StatusTopico {
+public enum  StatusTopico {
 	
 	NAO_RESPONDIDO,
 	NAO_SOLUCIONADO,
