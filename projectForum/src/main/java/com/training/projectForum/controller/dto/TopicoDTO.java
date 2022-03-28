@@ -1,6 +1,7 @@
 package com.training.projectForum.controller.dto;
 
 import com.training.projectForum.Model.Topico;
+import org.springframework.data.domain.Page;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,8 +21,8 @@ public class TopicoDTO {
         this.dataCriacao = topico.getDataCriacao();
     }
 
-    public static List<TopicoDTO> converte(List<Topico> topicos) {
-        return topicos.stream().map(TopicoDTO::new).collect(Collectors.toList());
+    public static Page<TopicoDTO> converte(Page<Topico> topicos) {
+        return topicos.map(TopicoDTO::new);
     }
 
     public Long getId() {
