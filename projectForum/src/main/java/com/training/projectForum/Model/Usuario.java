@@ -10,10 +10,16 @@ import java.util.List;
 
 @Entity
 public class Usuario implements UserDetails {
+
+	private static final long serialVersionUID = 1L;
+
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(nullable = false,length = 45)
 	private String nome;
+	@Column(nullable = false,unique = true, length = 45)
 	private String email;
+	@Column(nullable = false,unique = true, length = 45)
 	private String senha;
 
 	@ManyToMany(fetch = FetchType.EAGER)

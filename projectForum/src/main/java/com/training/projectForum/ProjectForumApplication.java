@@ -12,6 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class ProjectForumApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectForumApplication.class, args);
 	}
